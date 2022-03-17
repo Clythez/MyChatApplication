@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548054320141",
+    "project_id": "tedtext-c9c88",
+    "storage_bucket": "tedtext-c9c88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548054320141:android:08cc080cc284a754f20144",
+        "android_client_info": {
+          "package_name": "com.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548054320141-81p5sp1pn14l1m0j3kvn6b6pb9k9h02j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOKy7rU4CxPvSPVgrgQKIbDFM_1xzQMro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548054320141-81p5sp1pn14l1m0j3kvn6b6pb9k9h02j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
