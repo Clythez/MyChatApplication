@@ -3,15 +3,25 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {HomeScreen} from './screens/Home';
+import RoomList from './screens/RoomList';
+import Room from './screens/Room';
+import Login from './screens/Login';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParams = {
+  Login: any;
+  RoomList: any;
+  Room: any;
+};
+
+const Stack = createNativeStackNavigator<RootStackParams>();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator initialRouteName="RoomList">
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="RoomList" component={RoomList} />
+        <Stack.Screen name="Room" component={Room} />
       </Stack.Navigator>
     </NavigationContainer>
   );
