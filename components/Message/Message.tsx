@@ -9,7 +9,7 @@ const Message: React.FC<{message: string; image: string; username: string}> = ({
   username,
 }) => {
   return (
-    <View>
+    <View style={styles.messageContainer}>
       <MessageUserHeader image={image} username={username} />
       <View style={styles.layout}>
         <Text style={styles.defaultText}>{message}</Text>
@@ -20,7 +20,10 @@ const Message: React.FC<{message: string; image: string; username: string}> = ({
 
 const styles = StyleSheet.create({
   layout: {
-    borderWidth: 1,
+    backgroundColor: 'powderblue',
+  },
+  messageContainer: {
+    marginBottom: 10,
   },
   defaultText: {
     fontSize: 22,

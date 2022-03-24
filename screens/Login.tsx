@@ -9,6 +9,7 @@ const Login: React.FC<{name: String}> = ({name}) => {
   console.log(name);
   const navigation =
     useNavigation<NativeStackNavigationProp<RootStackParams>>();
+
   return (
     <View style={styles.layout}>
       <TouchableOpacity
