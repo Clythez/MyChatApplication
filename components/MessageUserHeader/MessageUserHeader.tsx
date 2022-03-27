@@ -1,11 +1,14 @@
 import React from 'react';
 
 import {View, Text, Image, StyleSheet} from 'react-native';
+import {printableDate} from '../../helper/dateConverter';
 
-const MessageUserHeader: React.FC<{image: string; username: string}> = ({
-  image,
-  username,
-}) => {
+const MessageUserHeader: React.FC<{
+  image: string;
+  username: string;
+  epochTime: number;
+}> = ({image, username, epochTime}) => {
+  const formattedDate: string = printableDate(epochTime);
   return (
     <View style={styles.layout}>
       <View style={styles.imageContainer}>
@@ -19,6 +22,7 @@ const MessageUserHeader: React.FC<{image: string; username: string}> = ({
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.textLayout}>{username}</Text>
+        <Text style={styles.date}>{formattedDate}</Text>
       </View>
     </View>
   );
@@ -50,6 +54,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: 'black',
+  },
+  date: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    fontSize: 12,
   },
 });
 
