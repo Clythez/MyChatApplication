@@ -38,10 +38,8 @@ export const Room: React.FC<{route: any}> = ({route}) => {
         getMessages(roomName).onSnapshot(querySnapshot => {
             const messagesData = querySnapshot.data();
             let temporaryMessages = [];
+            // let additionalMessages = [];
             for (const key in messagesData) {
-                // console.log(key);
-                // console.log(messagesData[key].message);
-                // console.log(messagesData[key].user);
                 temporaryMessages.push({
                     message: messagesData[key].message,
                     user: messagesData[key].user,
@@ -49,7 +47,17 @@ export const Room: React.FC<{route: any}> = ({route}) => {
                 });
             }
             setMessages([...temporaryMessages]);
-            // console.log('In firebase');
+            /*
+            if (temporaryMessages.length < 5) {
+                setMessages([...temporaryMessages]);
+            } else {
+                additionalMessages = [...temporaryMessages];
+                temporaryMessages = [];
+                for (let i = 0; i < 5; i++) {
+                    temporaryMessages.push(additionalMessages.pop());
+                }
+                setMessages([...temporaryMessages.reverse()]);
+            }*/
         });
     }, [roomName]);
 

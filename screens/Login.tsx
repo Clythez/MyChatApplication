@@ -5,13 +5,23 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParams} from '../App';
 
-const Login: React.FC<{name: String}> = (
-    {
-        /* name */
-    },
-) => {
-    // console.log(name);
+import {onGoogleButtonPress} from '../google';
+
+const Login: React.FC = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
+
+    const onGoogleLoginPress = () => {
+        onGoogleButtonPress().then(
+            () => {
+                console.log('Signed in with Google!');
+                navigation.navigate('RoomList');
+            },
+            error => {
+                console.error('Something went wrong');
+                console.log(error.code);
+            },
+        );
+    };
 
     return (
         <View style={styles.layout}>
@@ -26,7 +36,7 @@ const Login: React.FC<{name: String}> = (
 
             <TouchableOpacity
                 onPress={() => {
-                    navigation.navigate('RoomList');
+                    onGoogleLoginPress();
                 }}>
                 <View style={styles.google}>
                     <Text style={styles.googleText}>Sign in with Google</Text>
