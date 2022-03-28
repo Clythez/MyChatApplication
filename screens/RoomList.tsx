@@ -101,17 +101,7 @@ const styles = StyleSheet.create({
         height: '100%',
         flex: 1,
         backgroundColor: 'powderblue',
-    } /*
-  defaultText: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: 'black',
-  },
-  center: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },*/,
+    },
 });
 
 export default RoomList;

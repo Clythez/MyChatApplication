@@ -1,4 +1,4 @@
-package com.myapp;
+package com.tedtext;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

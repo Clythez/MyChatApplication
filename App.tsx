@@ -17,7 +17,7 @@ export type RootStackParams = {
 const Stack = createNativeStackNavigator<RootStackParams>();
 
 GoogleSignin.configure({
-    webClientId: '548054320141-81p5sp1pn14l1m0j3kvn6b6pb9k9h02j.apps.googleusercontent.com',
+    webClientId: '548054320141-naomngp2hrqhru9rrurpdh68uqihnd14.apps.googleusercontent.com',
 });
 
 const App = () => {

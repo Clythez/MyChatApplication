@@ -1,4 +1,4 @@
-package com.myapp;
+package com.tedtext;
 
 import android.app.Application;
 import android.content.Context;

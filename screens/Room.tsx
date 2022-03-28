@@ -20,11 +20,9 @@ export const Room: React.FC<{route: any}> = ({route}) => {
 
     useEffect(() => {
         scrollviewReference.current?.scrollToEnd({animated: false});
-        // console.log('Hi');
     }, [messages]);
 
     useEffect(() => {
-        // console.log('I Run!');
         const keyboardWillShowListener = Keyboard.addListener('keyboardDidShow', () => {
             scrollviewReference.current?.scrollToEnd({animated: true});
             console.log('Keyboard did show');
@@ -34,6 +32,7 @@ export const Room: React.FC<{route: any}> = ({route}) => {
         };
     }, []);
 
+    // Potential hacky solution in comments, not fleshed out as it is just wrong.
     useEffect(() => {
         getMessages(roomName).onSnapshot(querySnapshot => {
             const messagesData = querySnapshot.data();

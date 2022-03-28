@@ -6,6 +6,8 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParams} from '../App';
 
 import {onGoogleButtonPress} from '../google';
+import {onFacebookButtonPress} from '../facebook';
+import {statusCodes} from '@react-native-google-signin/google-signin';
 
 const Login: React.FC = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
@@ -17,8 +19,23 @@ const Login: React.FC = () => {
                 navigation.navigate('RoomList');
             },
             error => {
-                console.error('Something went wrong');
+                console.error('Something went wrong, sending you on');
                 console.log(error.code);
+                console.log(statusCodes.SIGN_IN_CANCELLED);
+                navigation.navigate('RoomList');
+            },
+        );
+    };
+
+    const onFacebookLoginPress = () => {
+        onFacebookButtonPress().then(
+            () => {
+                console.log('Signed in with Facebook!');
+            },
+            error => {
+                console.error('Something went wrong, sending you on');
+                console.log(error);
+                navigation.navigate('RoomList');
             },
         );
     };
@@ -27,13 +44,12 @@ const Login: React.FC = () => {
         <View style={styles.layout}>
             <TouchableOpacity
                 onPress={() => {
-                    navigation.navigate('RoomList');
+                    onFacebookLoginPress();
                 }}>
                 <View style={styles.facebook}>
                     <Text style={styles.facebookText}>Sign in with Facebook</Text>
                 </View>
             </TouchableOpacity>
-
             <TouchableOpacity
                 onPress={() => {
                     onGoogleLoginPress();

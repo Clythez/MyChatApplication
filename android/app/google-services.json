@@ -20,25 +20,50 @@
             "package_name": "com.myapp",
             "certificate_hash": "46f4236a812fc6357fb915f270bea5b6183dacfd"
           }
-        },
-        {
-          "client_id": "548054320141-81p5sp1pn14l1m0j3kvn6b6pb9k9h02j.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
         {
           "current_key": "AIzaSyDOKy7rU4CxPvSPVgrgQKIbDFM_1xzQMro"
+        },
+        {
+          "current_key": "AIzaSyCEckOV6Mw1od1B1JrmG008wFAGoZ4aeb0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "548054320141-81p5sp1pn14l1m0j3kvn6b6pb9k9h02j.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548054320141:android:fa702e3d9e867fa7f20144",
+        "android_client_info": {
+          "package_name": "com.tedtext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548054320141-mknhprk48ff871d96mta7cah24bhcqqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tedtext",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOKy7rU4CxPvSPVgrgQKIbDFM_1xzQMro"
+        },
+        {
+          "current_key": "AIzaSyCEckOV6Mw1od1B1JrmG008wFAGoZ4aeb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }
